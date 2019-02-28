@@ -1,1 +1,2 @@
-json.name @name.upcase
+json.name @name
+json.message @message
