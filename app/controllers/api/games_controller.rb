@@ -9,4 +9,18 @@ class Api::GamesController < ApplicationController
     end
     render 'name_game.json.jbuilder'
   end
+
+  def guess_a_number
+    @guess = params[:guess].to_i
+    number = 42
+    @output = "Please enter a number."
+    if @guess < number
+      @output = "Your guess is too low."
+    elsif @guess > number
+      @output = "Your guess is too high."
+    else
+      @output = "You guess it!"
+    end
+    render 'guess_a_number.json.jbuilder'
+  end
 end
