@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   namespace :api do
     get "/game" => "games#name_game"
     get "/number_game" => "games#guess_a_number"
+    get "/numbers/:guessed_number" =>"games#number_guessing_game"
   end
 end
