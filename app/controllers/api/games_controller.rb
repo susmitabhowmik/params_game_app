@@ -19,7 +19,7 @@ class Api::GamesController < ApplicationController
     elsif @guess > number
       @output = "Your guess is too high."
     else
-      @output = "You guess it!"
+      @output = "You guessed it!"
     end
     render 'guess_a_number.json.jbuilder'
   end
