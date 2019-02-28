@@ -1,6 +1,6 @@
 class Api::GamesController < ApplicationController
   def name_game
-    @message = "name game!"
+    @name = params[:name]
     render 'name_game.json.jbuilder'
   end
 end
